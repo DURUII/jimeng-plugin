@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# local secrets/runtime data
+session-cookies.json
+
+# macOS / editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# local agent workspace
+.claude/
