@@ -44,6 +44,18 @@ export default defineConfig({
           fileName: "popup.html",
           source: popupHtml,
         });
+
+        // Copy extension icons
+        const iconsDir = resolve(__dirname, "src/icons");
+        const iconFiles = fs.readdirSync(iconsDir);
+        for (const file of iconFiles) {
+          const source = fs.readFileSync(resolve(iconsDir, file));
+          this.emitFile({
+            type: "asset",
+            fileName: `icons/${file}`,
+            source,
+          });
+        }
       },
     },
   ],

@@ -1,10 +1,8 @@
 {
   "manifest_version": 3,
   "name": "即梦收藏导出",
-  "name.en": "Jimeng Liked Export",
   "version": "1.0.0",
   "description": "导出即梦 AI 收藏的 AIGC 图片，包括提示词、种子值和模型信息",
-  "description.en": "Export liked AIGC images from Jimeng AI with prompts, seeds and model info",
   "permissions": [
     "cookies",
     "storage",
@@ -17,8 +15,18 @@
     "https://jimeng.jianying.com/*",
     "https://*.byteimg.com/*"
   ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
   "background": {
     "service_worker": "background.js",
