@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "JiMeng Likes Exporter",
+  "version": "0.1.0",
+  "description": "Export liked items from Jimeng with images, prompts, and authors.",
+  "permissions": ["downloads", "storage", "scripting"],
+  "host_permissions": ["https://jimeng.jianying.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "JiMeng Likes Exporter"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://jimeng.jianying.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
